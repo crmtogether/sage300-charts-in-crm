@@ -1,5 +1,7 @@
 # sage300-charts-in-crm
-Example code showing how you can create a Chart from Sage 300 data in a Sage CRM Company summary screen
+Example code showing how you can create a Chart from Sage 300 data in a Sage CRM Company summary screen.
+
+Video run through available on our vimeo channel https://vimeo.com/402992173
 
 Provide a better user experience (and demo) within Sage CRM by displaying a graph showing Sage 300 data.
 
