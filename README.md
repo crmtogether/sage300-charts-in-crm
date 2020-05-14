@@ -1,4 +1,12 @@
 # sage300-charts-in-crm
+14 May 2020 - Changed how the chart is inserted to use a custom field in CRM as the table index seems to keep changing. 
+So you would create a field in "company" 
+We created a field called "comp_graphfield" (integer) and add this to the screen "companyboxlong". 
+You should probably keep the field on its own line in the screen and also set the field to be readonly.
+
+
+===============
+
 Example code showing how you can create a Chart from Sage 300 data in a Sage CRM Company summary screen.
 
 Video run through available on our vimeo channel https://vimeo.com/402992173

@@ -10,6 +10,14 @@ crm.ready(function()
 
 	if (act == "200" || act == "220" || act == "222"|| act == "140"|| act == "141")
 	{
+		var _field=document.getElementById('_Datacomp_graphfield');
+		$(_field).html('');
+			_field.parentNode.style.height='300px';
+			_field.parentNode.style.width='600px';
+			_field.parentNode.setAttribute('colspan','5');
+			_field.style.width='100%';
+			_field.style.height='400px';
+			
 		var keyOne = crm.getArg("Key1", $("form[name=EntryForm]").attr("action"));
 		var url="../custompages/company/ctsage300.asp?SID="+crm.getArg('sid')+"&Key0=1&Key1="+keyOne;
 		//alert(url);
@@ -18,16 +26,10 @@ crm.ready(function()
 			{
 				return;
 			}
-			var tables=document.getElementsByTagName('table');
-			var tableindex=10;
-			var row = tables[tableindex].insertRow(2);
-			var row = tables[tableindex].insertRow(2);
-			row.id="crmtogether";
-			var cell1 = row.insertCell(0);
-			cell1.id="crmtogether1";
-			cell1.colSpan="3";
-			cell1.width="100%";
-			$(cell1).html(data);
+			var _field=document.getElementById('_Datacomp_graphfield');
+			var mydiv=document.createElement('div');
+			_field.appendChild(mydiv);
+			$(mydiv).html(data);
 		});
 		
 	}

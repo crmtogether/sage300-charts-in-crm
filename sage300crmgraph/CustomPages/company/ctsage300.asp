@@ -15,6 +15,7 @@ CurrentUser=CRM.GetContextInfo("selecteduser", "User_UserId");
 
 container = CRM.GetBlock('container');
 container.DisplayButton(Button_Default) = false;
+container.DisplayForm = false;
 
 customcontent = CRM.GetBlock("content");
 customcontent.NewLine = false;
@@ -32,7 +33,7 @@ if ((comp_custid==null)||(comp_custid==""))
 }
 
 //add in our chart
-customcontent.contents+='<canvas id="yearchart" width="1242" height="221" style="display: block; height: 207px; width: 414px;" class="chartjs-render-monitor"></canvas>';
+customcontent.contents+='<canvas id="yearchart" width="1242" height="421" style="display: block; height: 207px; width: 414px;" class="chartjs-render-monitor"></canvas>';
 
 //our sql...we replace #YEARNUMBER#
 var csql="select sum(TERMTTLDUE) as amt, DATEPART(m, convert(datetime,convert(varchar(10),INVDATE,120))) as mth, "+
